@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento DOM</title>
+    <style>
+        body{
+            font: normal 16pt Times;
+        }
+        div#area,
+        .area1{
+            background: greenyellow;
+            color: blue;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Clique.....
+    </div>
+    <div class="area1">
+        passa o mouse gracinha
+    </div>
+     
+    <script>
+        var b= document.querySelector("div.area1")
+        var a= window.document.getElementById('area')
+        a.addEventListener('click',clicar)
+        b.addEventListener("mouseenter",passar)
+        b.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'Isso machuca!'
+            a.style.background= 'red'
+        }
+        function passar(){
+            b.innerText= "Olha só q curioso"
+        }
+        function sair(){
+            b.innerText= 'Passa o mouse gracinha'
+            a.style.background= 'greenyellow'
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome= window.prompt('digite seu primeiro nome')
+        var sobreN= window.prompt("agora digite o primeiro sobre nome")
+        var salario= window.prompt('Digite seu salário em reais')
+        total= nome.length + sobreN.length
+        salario1 = salario
+        dolar= (salario/4.97)
+        document.write(`Olá, seu nome tem ${total} letras</br>`)
+        document.writeln(`Seus 2 primeiros nomes são: <strong>${nome.toUpperCase()} ${sobreN.toLowerCase()}</strong></br>`)
+        document.write(`Seu salário é ${dolar.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'})}`)
+                
+    </script>
+</body>
+</html>

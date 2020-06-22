@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    Qual é o seu país de Origem? <input type="text" name="país" id="país">
+    <input type="button" value="enviar" onclick="verif()">
+    <div class="res">
+        
+    </div>
+    <script>
+        function verif(){
+            var txt = window.document.getElementById('país')
+            var pa = String(txt.value)
+            r= document.querySelector('div.res')
+            r.innerHTML = `<p>Seu país de origem é ${pa}<p>`
+            if(pa=='brasil'|| pa=='Brasil' || pa=='BRASIL'){
+                 r.innerHTML +=`<p>Portanto você é <strong>brasileiro</strong><p>`
+            }else{
+                r.innerHTML += `<p>Portanto você é <strong>estrangeiro</strong><p>`
+            }
+        }
+    </script>
+</body>
+</html>
